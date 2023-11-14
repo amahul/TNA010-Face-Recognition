@@ -11,16 +11,6 @@ function display_images()
     end
 end
 
-# Function to load images from a directory
-function load_images()
-    images = []
-    for file in readdir("./data")
-        img_path = joinpath(directory, file)
-        push!(images, Gray.(load(img_path)))
-    end
-    return images
-end
-
 
 function load_images_as_tensor(folder_path, num_persons, num_images_per_person)
     # Assuming all images have the same dimensions
